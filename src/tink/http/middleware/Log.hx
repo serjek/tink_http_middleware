@@ -86,7 +86,7 @@ class DefaultFormatter implements Formatter {
 				addSegment(''.rpad(' ', 8));
 				buf.add(req.url.pathWithQuery);
 				if (verbose) {
-					final hasHeader = false;
+					var hasHeader = false;
 					for (header in req) {
 						hasHeader = true;
 						buf.add('\n  ' + header.name + ': ' + header.value);
@@ -101,7 +101,7 @@ class DefaultFormatter implements Formatter {
 				addSegment((duration + 'ms').rpad(' ', 8));
 				buf.add(req.url.pathWithQuery);
 				if (verbose) {
-					final hasHeader = false;
+					var hasHeader = false;
 					for (header in res.header) {
 						hasHeader = true;
 						buf.add('\n  ' + header.name + ': ' + header.value);
